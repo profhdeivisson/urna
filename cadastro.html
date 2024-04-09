@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Candidatos</title>
+    <link rel="stylesheet" href="./css/styleCadastro.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="candidatos.html">Candidatos</a>
+    </div>
+
+    <h1>CADASTRO DE CANDIDATOS</h1>
+    <form id="candidatoForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required><br>
+        
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" required><br>
+        
+        <label for="partido">Partido:</label>
+        <input type="text" id="partido" required><br>
+        
+        <label for="cargo">Cargo:</label>
+        <select id="cargo" required>
+            <option value="">Selecione um cargo</option>
+            <option value="VICE-REPRESENTANTE">Vice-representante</option>
+            <option value="REPRESENTANTE">Representante</option>
+        </select><br>
+        
+        <label for="foto">Foto do Candidato:</label>
+        <input type="file" id="foto" accept="image/*" required><br> <!-- Adicione o campo de upload de imagem -->
+        
+        <input type="submit" value="Cadastrar">
+        <img id="loadingIcon" src="./Images/loading.gif" width="20" style="display: none;">
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+    <script type="module" src="./js/cadastro.js"></script>
+</body>
+</html>

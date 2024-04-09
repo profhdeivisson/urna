@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidatos Cadastrados</title>
+    <link rel="stylesheet" href="./css/styleCandidatos.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="candidatos.html">Candidatos</a>
+    </div>
+
+    <h1>LISTA DE CANDIDATOS CADASTRADOS</h1>
+    <div id="candidatos"></div>
+
+    <div id="modalEditarCandidato" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modalEditarCandidato').style.display='none'">&times;</span>
+            <h4>Editar Candidato</h4>
+            <label for="cargo">Cargo:</label>
+            <select id="cargo" name="cargo" required>
+                <option value="">Selecione um cargo</option>
+                <option value="VICE-REPRESENTANTE">Vice-representante</option>
+                <option value="REPRESENTANTE">Representante</option>
+            </select><br>
+
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="partido">Partido:</label>
+            <input type="text" id="partido" name="partido">
+
+            <button id="salvar">Salvar</button>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="js/candidatos.js"></script>
+
+</body>
+</html>
